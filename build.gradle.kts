@@ -2,6 +2,7 @@ val kotlin_version: String by project
 val logback_version: String by project
 val postgres_version: String by project
 val h2_version: String by project
+val ktor_version: String by project
 
 plugins {
     kotlin("jvm") version "2.0.0"
@@ -35,6 +36,7 @@ dependencies {
     implementation("com.h2database:h2:$h2_version")
     implementation("io.ktor:ktor-server-netty-jvm")
     implementation("ch.qos.logback:logback-classic:$logback_version")
+    implementation("io.ktor:ktor-server-cors:$ktor_version")
     testImplementation("io.ktor:ktor-server-tests-jvm")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
